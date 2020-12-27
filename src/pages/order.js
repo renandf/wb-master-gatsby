@@ -19,6 +19,7 @@ export default function OrderPage({ data }) {
   const { values, updateValues } = useForm({
     name: '',
     email: '',
+    mapleSyrup: '',
   });
   const {
     order,
@@ -58,6 +59,14 @@ export default function OrderPage({ data }) {
             name="email"
             value={values.email}
             onChange={updateValues}
+          />
+          <input
+            type="mapleSyrup"
+            id="mapleSyrup"
+            name="mapleSyrup"
+            value={values.mapleSyrup}
+            onChange={updateValues}
+            className="mapleSyrup"
           />
         </fieldset>
         <fieldset disabled={loading} className="menu">
