@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import OrderContext from '../components/OrderContext';
 import attachNamesAndPrices from './attachNamesAndPrices';
 import formatMoney from './formatMoney';
-import calculatePizzaPrice from './calculatePizzaPrice';
+import calculateOrderTotal from './calculateOrderTotal';
 
 export default function usePizza({ pizzas, values }) {
   const [order, setOrder] = useContext(OrderContext);
@@ -31,7 +31,7 @@ export default function usePizza({ pizzas, values }) {
 
     const body = {
       order: attachNamesAndPrices(order, pizzas),
-      total: formatMoney(calculatePizzaPrice(order, pizzas)),
+      total: formatMoney(calculateOrderTotal(order, pizzas)),
       name: values.name,
       email: values.email,
     };
