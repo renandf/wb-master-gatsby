@@ -9,3 +9,4 @@ This repository is the front-end code for the application and [renandf/wb-master
 - React
 - Gatsby
 - Sanity
+- Serverless functions
